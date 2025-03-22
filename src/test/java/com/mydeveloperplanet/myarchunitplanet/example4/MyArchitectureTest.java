@@ -10,7 +10,7 @@ import com.enofex.taikai.Taikai;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 
-public class MyArchitectureTest {
+class MyArchitectureTest {
 
     @Test
     void shouldFulfillConstraints() {
@@ -56,8 +56,7 @@ public class MyArchitectureTest {
                                 .shouldBeAnnotatedWithRepository()
                                 .shouldNotDependOnServices()
                                 .namesShouldEndWithRepository()))
-//                .addRule(TaikaiRule.of(...)) // Add custom ArchUnit rule here
-      .build()
+                .build()
                 .check();
     }
 
